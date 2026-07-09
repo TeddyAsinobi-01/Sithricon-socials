@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ithri Fresh Juice | Connect With Us</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-deep:   #046A38;
+    --green-rich:   #0E8C4B;
+    --gold:         #F5D400;
+    --gold-soft:    #FCE96B;
+    --cane-brown:   #8B5A2B;
+    --cream:        #FFFDF6;
+    --ink:          #0A3D22;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html,body{ height:100%; }
+
+  body{
+    font-family:'Poppins', sans-serif;
+    background:
+      radial-gradient(circle at 15% 8%, rgba(245,212,0,0.18), transparent 45%),
+      radial-gradient(circle at 85% 92%, rgba(14,140,79,0.16), transparent 45%),
+      var(--cream);
+    color:var(--ink);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:32px 20px;
+    overflow-x:hidden;
+  }
+
+  /* Ambient juice-drip accents */
+  body::before, body::after{
+    content:"";
+    position:fixed;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    filter:blur(70px);
+    z-index:0;
+    pointer-events:none;
+  }
+  body::before{
+    top:-90px; left:-90px;
+    background:rgba(245,212,0,0.35);
+  }
+  body::after{
+    bottom:-100px; right:-100px;
+    background:rgba(4,106,56,0.28);
+  }
+
+  .card{
+    position:relative;
+    z-index:1;
+    width:100%;
+    max-width:420px;
+    background:#ffffff;
+    border-radius:28px;
+    padding:40px 32px 36px;
+    text-align:center;
+    box-shadow:
+      0 2px 4px rgba(10,61,34,0.06),
+      0 20px 45px rgba(10,61,34,0.14);
+    border:1px solid rgba(4,106,56,0.08);
+    animation:riseIn 0.7s cubic-bezier(0.16,1,0.3,1) both;
+  }
+
+  @keyframes riseIn{
+    from{ opacity:0; transform:translateY(18px) scale(0.98); }
+    to{ opacity:1; transform:translateY(0) scale(1); }
+  }
+
+  .logo{
+    width:150px;
+    height:auto;
+    margin:0 auto 18px;
+    display:block;
+    filter:drop-shadow(0 6px 14px rgba(4,106,56,0.25));
+  }
+
+  h1{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:800;
+    font-size:2.4rem;
+    line-height:1;
+    color:var(--green-deep);
+    letter-spacing:0.5px;
+    margin-bottom:10px;
+    -webkit-text-stroke: 0.5px rgba(4,106,56,0.06);
+  }
+
+  h2{
+    font-family:'Poppins', sans-serif;
+    font-weight:500;
+    font-size:1rem;
+    color:#4B5A50;
+    margin-bottom:28px;
+    line-height:1.4;
+  }
+
+  .drip-divider{
+    width:52px;
+    height:5px;
+    border-radius:6px;
+    background:linear-gradient(90deg, var(--gold), var(--green-rich));
+    margin:0 auto 26px;
+  }
+
+  .links{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .btn{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-decoration:none;
+    font-family:'Poppins', sans-serif;
+    font-weight:600;
+    font-size:1rem;
+    color:#fff;
+    padding:14px 20px;
+    border-radius:16px;
+    position:relative;
+    overflow:hidden;
+    transition:transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+    box-shadow:0 6px 16px rgba(10,61,34,0.14);
+  }
+
+  .btn:focus-visible{
+    outline:3px solid var(--gold);
+    outline-offset:3px;
+  }
+
+  .btn:hover{
+    transform:translateY(-3px);
+    filter:brightness(1.06);
+    box-shadow:0 10px 22px rgba(10,61,34,0.2);
+  }
+
+  .btn:active{
+    transform:translateY(-1px) scale(0.99);
+  }
+
+  .btn .icon{
+    width:24px;
+    height:24px;
+    flex-shrink:0;
+  }
+
+  .btn span{
+    flex:1;
+    text-align:left;
+  }
+
+  .btn .arrow{
+    font-size:1.1rem;
+    opacity:0.75;
+    transition:transform 0.22s ease;
+  }
+  .btn:hover .arrow{ transform:translateX(3px); }
+
+  .btn-facebook{ background:linear-gradient(135deg, #1877F2, #0E5FCB); }
+  .btn-instagram{ background:linear-gradient(135deg, #F58529, #DD2A7B 45%, #8134AF 75%, #515BD4); }
+  .btn-tiktok{ background:linear-gradient(135deg, #111111, #2B2B2B); }
+  .btn-whatsapp{ background:linear-gradient(135deg, #25D366, #128C4A); }
+
+  footer{
+    margin-top:30px;
+    font-size:0.75rem;
+    color:#8AA294;
+    letter-spacing:0.3px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .card{ animation:none; }
+    .btn{ transition:none; }
+  }
+
+  @media (max-width:380px){
+    .card{ padding:32px 22px 28px; }
+    h1{ font-size:2rem; }
+  }
+</style>
+</head>
+<body>
+
+  <main class="card">
+    <img src="ithri-logo.jpg" alt="Ithri Fresh Juice logo" class="logo">
+
+    <h1>Welcome</h1>
+    <h2>Please select your social media destination</h2>
+    <div class="drip-divider"></div>
+
+    <nav class="links" aria-label="Social media links">
+      <a href="" class="btn btn-facebook" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/>
+        </svg>
+        <span>Facebook</span>
+        <span class="arrow">&rarr;</span>
+      </a>
+
+      <a href="" class="btn btn-instagram" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.45.53C6.09.28 6.82.11 7.88.06 8.94.01 9.28 0 12 0Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2A3.2 3.2 0 1 1 12 6.8a3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.17 1.17 0 1 1 0-2.34 1.17 1.17 0 0 1 0 2.34Z"/>
+        </svg>
+        <span>Instagram</span>
+        <span class="arrow">&rarr;</span>
+      </a>
+
+      <a href="" class="btn btn-tiktok" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M16.6 2h-3.2v13.6a2.9 2.9 0 1 1-2.06-2.78V9.6a6.1 6.1 0 1 0 5.26 6.04V8.34a7.6 7.6 0 0 0 4.4 1.4V6.5a4.4 4.4 0 0 1-4.4-4.4Z"/>
+        </svg>
+        <span>TikTok</span>
+        <span class="arrow">&rarr;</span>
+      </a>
+
+      <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Good%20day%2C%20I%20would%20like%20to%20Purchase%20your%20product" class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.33 4.96L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.06c-.24.68-1.4 1.33-1.93 1.4-.5.07-1.1.1-1.78-.11-.41-.13-.94-.3-1.61-.6-2.84-1.23-4.7-4.1-4.84-4.29-.14-.19-1.16-1.54-1.16-2.94s.74-2.09 1-2.38c.26-.28.57-.35.76-.35h.55c.18 0 .41-.07.64.49.24.58.81 2 .88 2.15.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.41.48-.14.14-.29.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.96 1.25 2.24 1.39.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36Z"/>
+        </svg>
+        <span>WhatsApp</span>
+        <span class="arrow">&rarr;</span>
+      </a>
+    </nav>
+
+    <footer>Ithri Fresh Juice &mdash; naturally pressed, freshly delivered</footer>
+  </main>
+
+</body>
+</html>
